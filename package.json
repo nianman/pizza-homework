@@ -17,6 +17,13 @@
   },
   "homepage": "https://gitlab.com/yamnyk.vlog/fe2_first-project#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
-  }
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.0"
+  },
+  "browserslist": [
+    "> 0.01%",
+    "last 100 versions"
+  ]
 }
