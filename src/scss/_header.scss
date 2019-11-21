@@ -1,4 +1,10 @@
-.header {
+.navbar {
   display: flex;
-  background-color: tomato;
+  background-color: $darkGrey;
+  padding: 1.2rem 1.2rem 1.2rem 1.85rem;
+  &__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.21rem;
+    color: white;
+  }
 }
