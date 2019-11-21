@@ -2,8 +2,11 @@ const gulp = require('gulp'),
       sass = require('gulp-sass'),
       prefixer = require('gulp-autoprefixer'),
       browserSync = require('browser-sync').create(),
-      concat = require('gulp-concat');
-      clean = require('gulp-clean');
+      concat = require('gulp-concat'),
+      clean = require('gulp-clean'),
+      babel = require('gulp-babel'),
+      uglify = require('gulp-uglify'),
+      cleanCSS = require('gulp-clean-css');
 
 const path = {
     dist: {
@@ -36,12 +39,17 @@ const buildSCSS = () => (
         .pipe(prefixer({
             cascade: false
         }))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest(path.dist.css))
 );
 
 const buildJS = () => (
     gulp.src(path.src.js)
         .pipe(concat("script.js"))
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(uglify())
         .pipe(gulp.dest(path.dist.js))
 );
 
