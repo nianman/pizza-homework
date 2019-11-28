@@ -1,6 +1,6 @@
 .navbar {
   display: flex;
-  background-color: $darkGrey;
+  background-color: #373c3f;
   padding: 1.2rem 1.2rem 1.2rem 1.85rem;
   &__title {
     font-family: 'Montserrat', sans-serif;
@@ -8,7 +8,50 @@
     color: white;
   }
 }
+.board{
+  background-image: url("../img/320pizza-header.png") ;
+  background-size: cover ;
+  background-repeat: no-repeat ;
+  color: white;
+  padding-bottom: 9.4rem;
+  margin-bottom: 0.4rem;
+  &__h2 {
+    font-size: 1.6rem;
+    padding-top: 1.9rem;
+    padding-bottom: 1.2rem;
+    padding-left: 2rem;
+  }
+  &__h3 {
+    font-size: 1.6rem;
+    padding-bottom: 1.1rem;
+    padding-left: 2rem;
+  }
+  &__a{
+    font-size: 1.4rem;
+    padding: 1.1rem 0 0 2rem;
+    color: #a6d6e0;
+    text-decoration: none;
+  }
+}
+.list{
+  &__item{
+    margin-bottom: 0.1rem;
+    display: flex;
+    &__text{
+      background-image: url("../img/320pizza-list-first.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: calc(100% - 71px);
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+      padding-top: 2.7rem;
+      padding-bottom: 2.8rem;
+    }
 
+  }
+}
 //.menu {
 //  &__item {
 //    &-title{
