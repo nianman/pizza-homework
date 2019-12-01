@@ -55,7 +55,18 @@
   }
 
 }
-
+.drop-list{
+  display: none;
+  padding: 1.7rem 0 1.3rem 1.5rem;
+  list-style: none;
+  width: 69%;
+  justify-content: space-between;
+  color: white;
+  text-transform: uppercase;
+}
+.drop__img{
+  display: none;
+}
 .board {
   font-family: Lato, sans-serif;
   background-image: url("../img/320pizza-header.png");
@@ -211,9 +222,15 @@
   font-family: 'Montserrat', sans-serif;
   background-color: #acd8ad;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: white;
-  padding: 0.9rem 0 0.9rem 0.6rem;
-  line-height: 1.6rem;
+  padding: 1rem 0 0.9rem 0;
+  line-height:1.7rem;
   margin-top: 4.75rem;
+  &__img{
+    display: none;
+  }
+  &__text{
+    margin: 0 auto;
+  }
 }

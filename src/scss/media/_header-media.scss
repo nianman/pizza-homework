@@ -10,19 +10,89 @@
 
     &--second {
       width: 25px;
-      height: 25px    }
+      height: 25px
+    }
 
     &--third {
       width: 25px;
-      height: 25px    }
+      height: 25px
+    }
 
     &--fourth {
       width: 25px;
-      height: 25px    }
+      height: 25px
+    }
   }
 }
 
 @media screen and (min-width: 640px) and (max-width: 980px) {
+  html {
+    font-size: 20px;
+  }
+  .navbar__burger {
+    &:hover .first-line {
+      transform: translate(0, 7.5px) rotate(45deg);
+    }
+
+    &:hover .second-line {
+      visibility: hidden;
+    }
+
+    &:hover .third-line {
+      transform: translate(0, -7.5px) rotate(-45deg);
+    }
+
+    .menu__name--img {
+      &--first {
+        content: url("../../img/640pizza-menu-name-first.png");
+
+      }
+
+      &--second {
+        content: url("../../img/640pizza-menu-name-second");
+      }
+
+      &--third {
+        content: url("../../img/640pizza-menu-name-third.png");
+      }
+
+      &--fourth {
+        content: url("../../img/640pizza-menu-name-fourth.png");
+      }
+    }
+
+    .board {
+      background-image: url("../../img/640pizza-header.png");
+    }
+
+    .list__item__sign__img {
+      content: url("../../img/640pizza-sign.png");
+    }
+
+    .list__item__text {
+      &--first {
+        background-image: url("../../img/640pizza-list-first.png");
+
+        background-position: 0 -324px;
+      }
+
+      &--second {
+        background-image: url("../../img/640pizza-list-second.png");
+        background-position: 0 -224px;
+
+      }
+
+      &--third {
+        background-image: url("../../img/640pizza-list-third.png");
+
+        background-position: 0 -34px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 980px) and (max-width: 1200px) {
+
   html {
     font-size: 20px;
   }
@@ -31,6 +101,7 @@
       content: url("../../img/640pizza-menu-name-first.png");
 
     }
+
     &--second {
       content: url("../../img/640pizza-menu-name-second");
     }
@@ -44,34 +115,209 @@
     }
   }
   .board {
-    background-image: url("../../img/640pizza-header.png");
+    background-image: url("../../img/980pizza-header.png");
   }
   .list__item__sign__img {
-    content: url("../../img/640pizza-sign.png");
+    display: none;
+  }
+  .list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &--img {
+        padding-right: 1rem;
+      }
+    }
   }
   .list__item__text {
-    &--first {
-      background-image: url("../../img/640pizza-list-first.png");
+    padding: 0;
 
-      background-position: 0 -324px;
+    &--first {
+      background-image: url("../../img/980pizza-list-first.png");
+      background-position: 0 0;
+      text-align: center;
+      padding: 5rem 3rem;
     }
 
     &--second {
-      background-image: url("../../img/640pizza-list-second.png");
-      background-position: 0 -224px;
-
+      background-image: url("../../img/980pizza-list-second.png");
+      background-position: 0 0;
+      padding: 5rem 3rem;
+      text-align: center;
     }
 
     &--third {
-      background-image: url("../../img/640pizza-list-third.png");
+      background-image: url("../../img/980pizza-list-third.png");
+      padding: 5rem 4rem;
+      background-position: 0 0;
+      text-align: center;
+    }
+  }
+  .all-menu {
+    display: flex;
+  }
+  .first-menu {
+    width: 50%;
+  }
+  .second-menu {
+    width: 50%;
+  }
+  .menu__header {
+    padding-left: 0.5rem;
+  }
+  .menu__header--green {
+    margin-top: 0.9rem;
+    padding-left: 0.5rem;
+  }
+  .board {
+    padding-bottom: 18.2rem;
+  }
+  .navbar__title {
+    display: none;
+  }
+  .navbar__burger {
+    display: none;
+  }
+  .drop-list {
+    display: flex;
+  }
+  .drop__img {
+    padding-right: 1rem;
+    display: inline-block;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-      background-position: 0 -34px;
+    &__img {
+      display: inline-block;
+      padding-right: 3rem;
+    }
+
+    &__text {
+      margin: 0 0 0 0;
     }
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .container {
-    width: 1280px;
+
+  html {
+    font-size: 25px;
+  }
+  .menu__name--img {
+    &--first {
+      content: url("../../img/640pizza-menu-name-first.png");
+
+    }
+
+    &--second {
+      content: url("../../img/640pizza-menu-name-second");
+    }
+
+    &--third {
+      content: url("../../img/640pizza-menu-name-third.png");
+    }
+
+    &--fourth {
+      content: url("../../img/640pizza-menu-name-fourth.png");
+    }
+  }
+  .board {
+    background-image: url("../../img/1200pizza.png");
+    padding-bottom: 14rem;
+  }
+  .list__item__sign__img {
+    display: none;
+  }
+  .list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &--img {
+        padding-right: 1rem;
+      }
+    }
+  }
+  .list__item__text {
+    padding: 0;
+
+    &--first {
+      background-image: url("../../img/980pizza-list-first.png");
+      background-position: 0 0;
+      text-align: center;
+      padding: 5rem 5rem;
+    }
+
+    &--second {
+      background-image: url("../../img/980pizza-list-second.png");
+      background-position: 0 0;
+      padding: 5rem 5rem;
+      text-align: center;
+    }
+
+    &--third {
+      background-image: url("../../img/980pizza-list-third.png");
+      padding: 5rem 5rem;
+      background-position: 0 0;
+      text-align: center;
+    }
+  }
+  .all-menu {
+    display: flex;
+  }
+  .first-menu {
+    width: 50%;
+  }
+  .second-menu {
+    width: 50%;
+  }
+  .menu__header {
+    padding-left: 1rem;
+  }
+  .menu__header--green {
+    margin-top: 0.9rem;
+    padding-left: 1rem;
+  }
+
+  .navbar__title {
+    display: none;
+  }
+  .navbar__burger {
+    display: none;
+  }
+  .drop-list {
+    display: flex;
+  }
+  .drop__img {
+    padding-right: 1rem;
+    display: inline-block;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__img {
+      display: inline-block;
+      padding-right: 9rem;
+    }
+
+    &__text {
+      margin: 0 0 0 0;
+    }
   }
 }
