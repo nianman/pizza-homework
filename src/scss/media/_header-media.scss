@@ -1,14 +1,76 @@
-@media screen and (min-width: 320px) and (max-width: 640px){
+@media screen and (min-width: 320px) and (max-width: 640px) {
   html {
     font-size: 10px;
   }
+  .menu__name--img {
+    &--first {
+      width: 25px;
+      height: 25px
+    }
+
+    &--second {
+      width: 25px;
+      height: 25px    }
+
+    &--third {
+      width: 25px;
+      height: 25px    }
+
+    &--fourth {
+      width: 25px;
+      height: 25px    }
+  }
 }
-@media screen and (min-width: 640px) and (max-width: 980px){
+
+@media screen and (min-width: 640px) and (max-width: 980px) {
   html {
     font-size: 20px;
   }
+  .menu__name--img {
+    &--first {
+      content: url("../../img/640pizza-menu-name-first.png");
+
+    }
+    &--second {
+      content: url("../../img/640pizza-menu-name-second");
+    }
+
+    &--third {
+      content: url("../../img/640pizza-menu-name-third.png");
+    }
+
+    &--fourth {
+      content: url("../../img/640pizza-menu-name-fourth.png");
+    }
+  }
+  .board {
+    background-image: url("../../img/640pizza-header.png");
+  }
+  .list__item__sign__img {
+    content: url("../../img/640pizza-sign.png");
+  }
+  .list__item__text {
+    &--first {
+      background-image: url("../../img/640pizza-list-first.png");
+
+      background-position: 0 -324px;
+    }
+
+    &--second {
+      background-image: url("../../img/640pizza-list-second.png");
+      background-position: 0 -224px;
+
+    }
+
+    &--third {
+      background-image: url("../../img/640pizza-list-third.png");
+
+      background-position: 0 -34px;
+    }
+  }
 }
-@media screen and (min-width: 1200px){
+
+@media screen and (min-width: 1200px) {
   .container {
     width: 1280px;
   }

@@ -1,66 +1,219 @@
 .navbar {
+  justify-content: space-between;
   display: flex;
   background-color: #373c3f;
-  padding: 1.2rem 1.2rem 1.2rem 1.85rem;
+  position: relative;
+  //padding: 1.2rem 1.2rem 1.2rem 1.85rem;
+
   &__title {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     font-size: 1.21rem;
     color: white;
+    padding: 1.2rem 0 1.1rem 1.85rem;
+  }
+  &__burger{
+    padding: 1.2rem 1.2rem;
+    display: inline-block;
+    &:hover{
+      background-color:#202529 ;
+    }
+    &:hover .dropdown{
+      display: inline-block;
+    }
+    &:hover .first-line{
+      transform: translate(0, 4px) rotate(45deg);
+    }
+    &:hover .second-line{
+      visibility: hidden;
+    }
+    &:hover .third-line{
+      transform: translate(0, -4px) rotate(-45deg);
+    }
+    &-line{
+      width: 1.4rem;
+      height: 0.15rem;
+      background-color: white;
+      margin-bottom: 0.25rem;
+    }
   }
 }
-.board{
-  background-image: url("../img/320pizza-header.png") ;
-  background-size: cover ;
-  background-repeat: no-repeat ;
+.dropdown{
+  display: none;
+  top: 3.7rem;
+  right: 0;
+  position: absolute;
+  list-style: none;
+  background-color: white;
+  &__item{
+    font-family: Lato, sans-serif;
+    font-size: 1.22rem;
+    padding: 1rem 9.6rem 1rem 1.2rem;
+  }
+  &__item:nth-child(even){
+    background-color: #f5f5f5;
+  }
+
+}
+
+.board {
+  font-family: Lato, sans-serif;
+  background-image: url("../img/320pizza-header.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   color: white;
-  padding-bottom: 9.4rem;
-  margin-bottom: 0.4rem;
+  font-weight: bold;
+  padding-bottom: 9.2rem;
+  margin-bottom: 0.35rem;
+
   &__h2 {
-    font-size: 1.6rem;
+    font-size: 1.59rem;
     padding-top: 1.9rem;
-    padding-bottom: 1.2rem;
+    padding-bottom: 0.7rem;
     padding-left: 2rem;
   }
+
   &__h3 {
     font-size: 1.6rem;
-    padding-bottom: 1.1rem;
+    padding-bottom: 1rem;
     padding-left: 2rem;
   }
-  &__a{
+
+  &__a {
     font-size: 1.4rem;
-    padding: 1.1rem 0 0 2rem;
+    padding: 0 0 0 2rem;
     color: #a6d6e0;
     text-decoration: none;
   }
 }
-.list{
-  &__item{
-    margin-bottom: 0.1rem;
+
+.list {
+  &__item {
+    margin-bottom: 0.2rem;
     display: flex;
-    &__text{
-      background-image: url("../img/320pizza-list-first.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
+    &__sign__img{
+
+    }
+    &__text {
+
       width: calc(100% - 71px);
       color: white;
-      font-size: 2rem;
-      text-align: center;
+      font-size: 2.15rem;
       padding-top: 2.7rem;
-      padding-bottom: 2.8rem;
+      padding-bottom: 2.7rem;
+      &--first{
+        background-image: url("../img/320pizza-list-firs.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0 -206px;
+        padding-left: 6.2rem;
+      }&--second{
+               background-image: url("../img/320pizza-list-second.png");
+               background-size: cover;
+               background-repeat: no-repeat;
+               background-position: 0 -158px;
+        padding-left: 7.1rem;
+      }&--third{
+                      background-image: url("../img/320pizza-list-third.png");
+                      background-size: cover;
+                      background-repeat: no-repeat;
+                      background-position: 0 -27px;
+        padding-left: 8.1rem;
+      }
     }
 
   }
+
+  &__footer {
+    padding-left: 0.8rem;
+    padding-top: 2.15rem;
+    font-family: Lato, sans-serif;
+
+    &__h3 {
+      font-size: 1.98rem;
+      color: #3f4043;
+      text-transform: uppercase;
+    }
+
+    &__p {
+      padding-top: 0.3rem;
+      font-size: 1rem;
+      color: #cbccce;
+    }
+  }
 }
-//.menu {
-//  &__item {
-//    &-title{
-//      &::after {
-//
-//      }
-//
-//    }
-//  }
-//}
-//
-//.menu__item-title
+
+.menu {
+  margin: 1rem 0 0 0;
+
+  &__header {
+    background-color: #3f4043;
+    padding: 1rem 0 0.7rem 1.8rem;
+    color: #acd8ad;
+    font-size: 2.01rem;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    &--green{
+      margin-top: 2.9rem;
+      background-color: #acd8ad;
+      color: white;
+    }
+  }
+
+  &__name {
+    width: 89.5%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.21rem;
+    padding-bottom: 0.69rem;
+    font-family: Lato, sans-serif;
+    margin: 0 auto;
+    align-items: center;
+    &--text {
+      width: 90.5%;
+      margin: 0 auto;
+      color: #3f4043;
+      font-size: 1.5rem;
+      font-family: 'Lato', sans-serif;
+      text-transform: uppercase;
+
+    }
+  }
+  &__content{
+    margin: 0 auto;
+    &--second{
+      padding-top: 0.43rem;
+    }
+    &--item{
+
+      &--name{
+        width: 89.5%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        font-size: 1.33rem;
+        font-family: 'Lato', sans-serif;
+        padding-top: 0.99rem;
+      }
+      &--text{
+        font-weight: 500;
+        font-size: 1.02rem;
+        padding-top: 0.7rem;
+        margin: 0 auto;
+        width: 89%;
+      }
+
+    }
+  }
+}
+
+.footer{
+  font-family: 'Montserrat', sans-serif;
+  background-color: #acd8ad;
+  text-align: center;
+  font-size: 1.25rem;
+  color: white;
+  padding: 0.9rem 0 0.9rem 0.6rem;
+  line-height: 1.6rem;
+  margin-top: 4.75rem;
+}
